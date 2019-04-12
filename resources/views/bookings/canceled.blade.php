@@ -46,9 +46,8 @@
                     </td>
                     <td>
                         <div class="input-group">
-                            {!! Form::open(['route'=>['bookings.destroy', $booking->id]]) !!}
-                            @method('DELETE')
-                            {!! link_to_route('bookings.edit','',[$booking->id],['class'=>'fa fa-pencil btn btn-primary btn-xs','title' => 'Edit Booking']) !!}
+                            {!! Form::open(['route'=>['bookings.destroy', $booking->id], 'method'=>'DELETE',]) !!}
+                            {!! link_to_route('booking.edit','',[$booking->id],['class'=>'fa fa-pencil btn btn-primary btn-xs','title' => 'Edit Booking']) !!}
                             {!! link_to_route('bookings.show', '',[$booking->id],['class'=>'fa fa-bars btn btn-success btn-xs','title' => 'Show Booking Details']) !!}
                             {{ Form::button('', ['type'=>'submit','class'=>'btn btn-danger btn-xs fa fa-trash','onclick'=>'return confirm("Are you sure you want to delete this?")','title' => 'Delete Booking']) }}
                             {!! Form::close() !!}
@@ -61,7 +60,6 @@
             </tbody>
             @endforeach
         </table>
-        @section('search')
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <form class="navbar-form navbar-right">
@@ -72,7 +70,6 @@
                 </form>
             </div>
         </div>
-        @endsection
     </div>
 </div>
 @endsection

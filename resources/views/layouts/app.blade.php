@@ -308,8 +308,9 @@ desired effect
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ route('bookings.create') }}">Add Booking</a></li>
-            <li><a href="{{ route('bookings.index') }}">View Booking List</a></li>
+            <li><a href="/booking/create">Add Booking</a></li>
+            <li><a href="/booking">View Booking</a></li>
+            <li><a href="/booking/canceled">Canceled Booking</a></li>
           </ul>
         </li>
         <li class="treeview">

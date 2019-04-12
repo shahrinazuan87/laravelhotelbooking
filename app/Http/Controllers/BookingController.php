@@ -56,7 +56,7 @@ class BookingController extends Controller
 
         session()->flash('msg', 'The Room Has been booked');
 
-        return redirect('/bookings');
+        return redirect('/booking');
     }
 
 
@@ -79,26 +79,26 @@ class BookingController extends Controller
         $booking = Booking::find($id);
         $booking->update($request->all());
         $request->session()->flash('msg', 'Booking has been updated');
-        return redirect('/bookings');
+        return redirect('/booking');
     }
 
     public function destroy(Request $request, Booking $booking)
     {
         Booking::destroy($booking->id);
         $request->session()->flash('msg', 'Booking has been deleted');
-        return redirect('bookings');
+        return redirect('booking');
     }
 
     public function cancel($room_id, $booking_id) {
         $booking = Booking::find($booking_id);
         $room = Room::find($room_id);
         $booking->status = 0;
-        $booking->user_id = auth()->user()->id();
+        $booking->user_id = auth()->id();
         $booking->save();
         $room->status = 1;
         $room->save();
         session()->flash('msg','Booking has been canceled');
-        return redirect('/bookings');
+        return redirect('/booking');
     }
 
     public function canceledBookings() {
