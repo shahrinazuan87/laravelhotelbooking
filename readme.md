@@ -1,6 +1,6 @@
 # laravelhotelbooking
-Laravel based application used to book rooms and bookings and manage bookings and clients and have permissions and roles add-ons.
-This is the further enhancement of laravel booking app by javedbaloch4 url(https://github.com/javedbaloch4/Laravel-Booking). 
+Laravel based application used to book rooms and bookings, manage bookings, clients also have permissions and roles add-ons. <br>
+This is the further enhancement of laravel booking app by javedbaloch4 url(https://github.com/javedbaloch4/Laravel-Booking). <br>
 Im just integrate his app to my project with some enhancement like theme templates, user permissions and roles. 
 
 ### Features
@@ -33,13 +33,14 @@ Im just integrate his app to my project with some enhancement like theme templat
 
 ``` php artisan serve ```
 
-** localhost:8000/ **
+** localhost:8000/ ** credentials shahrin@gmail.com - shahrin12345
 
 ## Screenshot
 
 <img src="/screenshotsystem/dashboard.PNG" width="40%"> <img src="/screenshotsystem/rooms.PNG" width="40%">
 <img src="/screenshotsystem/permission.PNG" width="40%"> <img src="/screenshotsystem/clients.PNG" width="40%">
 <img src="/screenshotsystem/users.PNG" width="40%"> <img src="/screenshotsystem/booking list.PNG" width="40%">
+<img src="/screenshotsystem/cancelled booking.PNG" width="40%">
 
 
 
