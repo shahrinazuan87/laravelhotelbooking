@@ -54,7 +54,8 @@
                                 {{ Form::button('', ['type'=>'submit','class'=>'btn btn-danger btn-xs fa fa-trash','onclick'=>'return confirm("Are you sure you want to delete this?")','title' => 'Delete Booking']) }}
                                 {!! Form::close() !!}
 
-                                {!! Form::open(['route'=>['bookings.canceled', $booking->id, $booking->room_id]]) !!}
+                                <!-- {!! Form::open(['route'=>['bookings.canceled', $booking->id, $booking->room_id]]) !!} -->
+                                {{ Form::open(array('route' => array('bookings.canceled',$booking->id,$booking->room_id),'method' => 'get')) }}
                                 {{ Form::button('', ['type'=>'submit','class'=>'btn btn-warning btn-xs fa fa-times-circle col-md-12','onclick'=>'return confirm("Are you sure you want to Cancel Booking?")', 'title' => 'Cancel Booking', 'style' => 'margin-top: 5px']) }}
                                 {!! Form::close() !!}
 
