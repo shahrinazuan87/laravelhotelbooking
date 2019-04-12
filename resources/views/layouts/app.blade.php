@@ -310,7 +310,7 @@ desired effect
           <ul class="treeview-menu">
             <li><a href="/booking/create">Add Booking</a></li>
             <li><a href="/booking">View Booking</a></li>
-            <li><a href="/booking/canceled">Canceled Booking</a></li>
+            <li><a href="/bookings/canceled">Canceled Booking</a></li>
           </ul>
         </li>
         <li class="treeview">
