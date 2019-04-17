@@ -19,7 +19,7 @@ class ClientsController extends Controller
     {
 
         // Find All clients and passing to clients
-        $clients = Client::all();
+        $clients = Client::paginate(10);
 
         // Redirect to Clients page
         return view('clients.index', compact('clients'));

@@ -42,12 +42,13 @@ Route::get('/clients/data','ClientsController@data')->name('clients.data');
 // Rooms
 Route::resource('rooms','RoomController');
 
-// Cancel Bookings
-Route::get('/bookings/{room_id}/{booking_id}','BookingController@cancel')->name('bookings.cancel');
-// Canceled Bookings
-Route::post('bookings/canceled','BookingController@canceledBookings')->name('bookings.canceled');
 // Bookings
-Route::resource('bookings','BookingController');
+Route::resource('booking','BookingController');
+// Cancel Bookings
+Route::post('booking/{room_id}/{booking_id}','BookingController@cancel')->name('booking.cancel');
+
+// Canceled Bookings
+Route::get('bookings/canceled','BookingController@canceledBookings')->name('booking.canceled');
 
 // Sessions
 Route::get('/login','SessionsController@create')->name('login');
