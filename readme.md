@@ -12,6 +12,9 @@ Laravel based application used to book rooms and bookings, manage bookings, clie
 * Adding housekeeping work schedule 
 * Adding report module for all transactions bookings, rooms, users, clients
 * Adding form module of damage/needed hotel goods 
+* Adding module SweetAlert2, Pagination, Export PDF, Search function
+* Create Restapi via Passport Authenthication
+
 
 ## Installations / Instructions
 
